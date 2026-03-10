@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Leichhardt Deck — Divine Decks</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1978e5",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111821",
+                    },
+                    fontFamily: { "display": ["Inter", "sans-serif"] },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-white text-slate-900">
+
+    <!-- NAV -->
+    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="../index.html" class="flex items-center">
+                    <img src="../brand_assets/DivineDecksLogo.png" alt="Divine Decks" class="h-10">
+                </a>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="../index.html" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Home</a>
+                    <a href="../why-choose-us.html" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Why Choose Us</a>
+                    <a href="../services.html" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Services</a>
+                    <a href="../projects.html" class="text-sm font-medium text-primary border-b-2 border-primary transition-colors">Projects</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="../quote.html" class="hidden sm:flex bg-primary hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-colors shadow-lg shadow-blue-500/20">
+                        Get a Quote
+                    </a>
+                    <button class="md:hidden text-slate-600" id="menu-toggle">
+                        <span class="material-symbols-outlined" id="menu-icon">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:hidden bg-white border-b border-slate-200 p-4" id="mobile-menu">
+            <div class="flex flex-col gap-4">
+                <a href="../index.html" class="text-sm font-medium text-slate-600">Home</a>
+                <a href="../why-choose-us.html" class="text-sm font-medium text-slate-600">Why Choose Us</a>
+                <a href="../services.html" class="text-sm font-medium text-slate-600">Services</a>
+                <a href="../projects.html" class="text-sm font-medium text-slate-600">Projects</a>
+                <a href="../quote.html" class="bg-primary text-white text-center py-2 rounded-lg font-bold">Get a Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="relative h-[70vh] min-h-[480px] flex items-end overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img alt="Leichhardt Deck — Spotted Gum with Glass Balustrade" class="w-full h-full object-cover" src="../projects/project1.jpeg"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111821]/80 via-[#111821]/30 to-transparent"></div>
+        </div>
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+            <div class="max-w-2xl">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-8 h-0.5 bg-primary"></div>
+                    <span class="text-primary text-xs font-bold uppercase tracking-widest">Completed Project</span>
+                </div>
+                <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight mb-3" style="letter-spacing:-0.02em;">
+                    Leichhardt Deck
+                </h1>
+                <p class="text-slate-300 text-base md:text-lg leading-relaxed max-w-xl">
+                    A premium outdoor entertaining deck built for a federation home in the heart of Leichhardt, Inner West Sydney.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT META BAR -->
+    <section class="border-b border-slate-200 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-slate-200 py-6">
+                <div class="py-4 sm:py-0 sm:pr-8">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Location</p>
+                    <p class="text-sm font-semibold text-slate-800">Leichhardt, Inner West Sydney</p>
+                </div>
+                <div class="py-4 sm:py-0 sm:px-8">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Materials</p>
+                    <p class="text-sm font-semibold text-slate-800">Spotted Gum Hardwood, Tempered Glass</p>
+                </div>
+                <div class="py-4 sm:py-0 sm:pl-8">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Timeline</p>
+                    <p class="text-sm font-semibold text-slate-800">4 Weeks (Completed June 2023)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
+
+                <!-- Left: Story -->
+                <div class="lg:col-span-2 space-y-10">
+
+                    <!-- The Vision -->
+                    <div>
+                        <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                            <span class="text-primary font-light">—</span> The Vision
+                        </h2>
+                        <p class="text-slate-600 leading-relaxed" style="line-height:1.75;">
+                            The owners of a classic Leichhardt federation home came to us wanting to bring their underutilised backyard to life. Their goal was a generous entertaining deck that respected the home's heritage character while creating a modern outdoor space for family gatherings and long summer evenings in the Inner West.
+                        </p>
+                    </div>
+
+                    <!-- The Challenge -->
+                    <div>
+                        <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                            <span class="text-primary font-light">—</span> The Challenge
+                        </h2>
+                        <p class="text-slate-600 leading-relaxed" style="line-height:1.75;">
+                            Like many Inner West properties, the yard sat on an uneven, sloping block with an existing concrete slab and established garden beds the owners wanted to keep. Preserving the mature lemon tree and rear garden while still achieving a full-width deck required careful planning around the existing footprint.
+                        </p>
+                    </div>
+
+                    <!-- The Solution -->
+                    <div>
+                        <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                            <span class="text-primary font-light">—</span> The Solution
+                        </h2>
+                        <p class="text-slate-600 leading-relaxed" style="line-height:1.75;">
+                            We designed a raised subframe system using galvanised steel posts set clear of the existing garden beds, allowing the deck to float above the yard without disturbing the landscape below. For the decking boards we chose spotted gum hardwood — a native Australian timber perfectly suited to Sydney's humid summers and afternoon sun. A frameless glass balustrade along the rear boundary keeps the space open and airy, in keeping with the relaxed Inner West lifestyle.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Right: Highlights sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="bg-slate-50 rounded-2xl p-7 border border-slate-100 sticky top-28">
+                        <h3 class="text-base font-bold text-slate-900 mb-5">Project Highlights</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <span class="material-icons text-primary text-base mt-0.5">check_circle</span>
+                                <span class="text-sm text-slate-700">Custom LED perimeter lighting</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-icons text-primary text-base mt-0.5">check_circle</span>
+                                <span class="text-sm text-slate-700">Hidden fastener system for clean lines</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-icons text-primary text-base mt-0.5">check_circle</span>
+                                <span class="text-sm text-slate-700">Built-in cedar drinks stand</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-icons text-primary text-base mt-0.5">check_circle</span>
+                                <span class="text-sm text-slate-700">Warren-style glass railing</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT GALLERY -->
+    <section class="py-16 bg-[#f6f7f8]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px:8">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-2">Project Gallery</h2>
+                <p class="text-slate-500 text-sm max-w-md mx-auto">Every detail matters — a professional team from every angle.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Large left image -->
+                <div class="sm:row-span-2 overflow-hidden rounded-2xl aspect-[4/3] sm:aspect-auto">
+                    <img src="../projects/project1.jpeg" alt="Cedar deck overview" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"/>
+                </div>
+                <!-- Top right -->
+                <div class="overflow-hidden rounded-2xl aspect-[4/3]">
+                    <img src="../projects/project2.jpeg" alt="Glass railing detail" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"/>
+                </div>
+                <!-- Bottom right (split into two) -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="overflow-hidden rounded-2xl aspect-square">
+                        <img src="../projects/project3.jpeg" alt="Cedar grain close-up" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"/>
+                    </div>
+                    <div class="overflow-hidden rounded-2xl aspect-square">
+                        <img src="../projects/project4.jpeg" alt="Evening lighting" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="bg-primary py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl md:text-4xl font-extrabold text-white mb-3">Ready to start your project?</h2>
+            <p class="text-blue-200 mb-8 text-base max-w-md mx-auto">
+                We've been ready for a free design consultation and quote.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../quote.html" class="bg-white text-primary font-bold px-8 py-3.5 rounded-xl text-sm hover:bg-blue-50 transition-colors shadow-lg shadow-blue-900/20">
+                    Get a Free Estimate
+                </a>
+                <a href="../projects.html" class="border border-white/40 text-white font-bold px-8 py-3.5 rounded-xl text-sm hover:bg-white/10 transition-colors">
+                    View More Work
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="mb-6">
+                        <img src="../brand_assets/DivineDecksLogo.png" alt="Divine Decks" class="h-8">
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Excellence in outdoor living design and construction. Based in Marrickville, Sydney — crafting premium decks and outdoor spaces for homes across the area.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-4">
+                        <li><a class="text-slate-600 hover:text-primary text-sm" href="../index.html">Home</a></li>
+                        <li><a class="text-slate-600 hover:text-primary text-sm" href="../why-choose-us.html">Why Choose Us</a></li>
+                        <li><a class="text-slate-600 hover:text-primary text-sm" href="../projects.html">Projects</a></li>
+                        <li><a class="text-slate-600 hover:text-primary text-sm" href="../services.html">Services</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 font-bold mb-6">Services</h4>
+                    <ul class="space-y-4">
+                        <li><a class="text-slate-600 hover:text-primary text-sm" href="../services.html">Custom Decks</a></li>
+                        <li><a class="text-slate-600 hover:text-primary text-sm" href="../services.html">Pergolas &amp; Gazebos</a></li>
+                        <li><a class="text-slate-600 hover:text-primary text-sm" href="../services.html">Outdoor Kitchens</a></li>
+                        <li><a class="text-slate-600 hover:text-primary text-sm" href="../services.html">Restoration</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 font-bold mb-6">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-slate-600 text-sm">
+                            <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                            Marrickville, 2204
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-600 text-sm">
+                            <span class="material-symbols-outlined text-primary text-lg">call</span>
+                            0481 827 666
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-600 text-sm">
+                            <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                            rory@divinedecks.com.au
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-xs">© 2024 Divine Decks Construction Ltd. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-xl">facebook</span>
+                    <span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-xl">photo_camera</span>
+                    <span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-xl">work</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            icon.textContent = menu.classList.contains('hidden') ? 'menu' : 'close';
+        });
+    </script>
+</body>
+</html>

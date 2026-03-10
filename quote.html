@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Get a Quote — Divine Decks</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1978e5",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111821",
+                    },
+                    fontFamily: { "display": ["Inter", "sans-serif"] },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .step-connector::after {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 32px;
+            bottom: -16px;
+            width: 2px;
+            background: #e2e8f0;
+        }
+        .step-item:last-child .step-connector::after { display: none; }
+        select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%236b7280'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.75rem center; background-size: 1rem; }
+    </style>
+</head>
+<body class="bg-[#f6f7f8] text-slate-900">
+
+    <!-- NAV -->
+    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center">
+                    <img src="brand_assets/DivineDecksLogo.png" alt="Divine Decks" class="h-10">
+                </a>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-sm font-medium transition-colors hover:text-primary text-slate-600">Home</a>
+                    <a href="why-choose-us.html" class="text-sm font-medium transition-colors hover:text-primary text-slate-600">Why Choose Us</a>
+                    <a href="services.html" class="text-sm font-medium transition-colors hover:text-primary text-slate-600">Services</a>
+                    <a href="projects.html" class="text-sm font-medium transition-colors hover:text-primary text-slate-600">Projects</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="quote.html" class="hidden sm:flex bg-primary hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-colors shadow-lg shadow-blue-500/20">
+                        Get a Quote
+                    </a>
+                    <button class="md:hidden text-slate-600" id="menu-toggle">
+                        <span class="material-symbols-outlined" id="menu-icon">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:hidden bg-white border-b border-slate-200 p-4" id="mobile-menu">
+            <div class="flex flex-col gap-4">
+                <a href="index.html" class="text-sm font-medium text-slate-600">Home</a>
+                <a href="why-choose-us.html" class="text-sm font-medium text-slate-600">Why Choose Us</a>
+                <a href="services.html" class="text-sm font-medium text-slate-600">Services</a>
+                <a href="projects.html" class="text-sm font-medium text-slate-600">Projects</a>
+                <a href="quote.html" class="bg-primary text-white text-center py-2 rounded-lg font-bold">Get a Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
+
+            <!-- LEFT: FORM -->
+            <div class="lg:col-span-3">
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10">
+                    <!-- Label -->
+                    <span class="inline-block text-xs font-bold uppercase tracking-widest text-primary mb-4">
+                        Start Your Project
+                    </span>
+                    <h1 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-3">
+                        Request a Custom Quote
+                    </h1>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-8">
+                        Fill out the form below, and our master builders will review your requirements and get back to you with a detailed estimate.
+                    </p>
+
+                    <form class="space-y-5" name="quote-request" method="POST" netlify>
+                        <input type="hidden" name="form-name" value="quote-request"/>
+                        <!-- Row 1 -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1.5" for="full-name">Full Name</label>
+                                <input
+                                    type="text"
+                                    id="full-name"
+                                    name="full-name"
+                                    placeholder="John Doe"
+                                    class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors"
+                                />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1.5" for="email">Email Address</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="john@example.com"
+                                    class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Row 2 -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1.5" for="phone">Phone Number</label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="0400 000 000"
+                                    class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors"
+                                />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1.5" for="project-type">Project Type</label>
+                                <select
+                                    id="project-type"
+                                    name="project-type"
+                                    class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm text-slate-500 bg-white focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors appearance-none"
+                                >
+                                    <option value="" disabled selected>Select a category</option>
+                                    <option>Custom Deck Design</option>
+                                    <option>General Carpentry</option>
+                                    <option>Composite Decking</option>
+                                    <option>Sauna</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Textarea -->
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1.5" for="project-details">Tell us about your project:</label>
+                            <textarea
+                                id="project-details"
+                                name="project-details"
+                                rows="5"
+                                placeholder="Dimensions, preferred materials, terrain type..."
+                                class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors resize-none"
+                            ></textarea>
+                        </div>
+
+                        <!-- Submit -->
+                        <button
+                            type="submit"
+                            class="w-full bg-primary hover:bg-blue-700 active:bg-blue-800 text-white font-bold py-3.5 rounded-xl text-sm flex items-center justify-center gap-2 transition-colors shadow-lg shadow-blue-500/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                        >
+                            Send Request
+                            <span class="material-icons text-base">arrow_forward</span>
+                        </button>
+
+                        <p class="text-center text-xs text-slate-400">
+                            By clicking submit, you agree to our
+                            <a href="#" class="underline hover:text-primary transition-colors">Terms of Service</a>
+                            and
+                            <a href="#" class="underline hover:text-primary transition-colors">Privacy Policy</a>.
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- RIGHT: INFO PANEL -->
+            <div class="lg:col-span-2 flex flex-col gap-6">
+
+                <!-- What to Expect + Trust Badges (single card) -->
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:p-8">
+                    <h2 class="text-base font-bold text-slate-900 mb-6">What to Expect Next</h2>
+                    <ol class="space-y-0 mb-6">
+
+                        <li class="step-item flex gap-4 pb-5 relative">
+                            <div class="step-connector flex-shrink-0 relative">
+                                <div class="w-8 h-8 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center z-10 relative">1</div>
+                            </div>
+                            <div class="pt-1">
+                                <h3 class="text-sm font-semibold text-slate-900 mb-0.5">Form Submission</h3>
+                                <p class="text-xs text-slate-500 leading-relaxed">Details sent directly to our design team. Master builders review within 24 hours.</p>
+                            </div>
+                        </li>
+
+                        <li class="step-item flex gap-4 pb-5 relative">
+                            <div class="step-connector flex-shrink-0 relative">
+                                <div class="w-8 h-8 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center z-10 relative">2</div>
+                            </div>
+                            <div class="pt-1">
+                                <h3 class="text-sm font-semibold text-slate-900 mb-0.5">Expert Review</h3>
+                                <p class="text-xs text-slate-500 leading-relaxed">A master builder reviews your project specifics and prepares tailored questions.</p>
+                            </div>
+                        </li>
+
+                        <li class="step-item flex gap-4 pb-5 relative">
+                            <div class="step-connector flex-shrink-0 relative">
+                                <div class="w-8 h-8 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center z-10 relative">3</div>
+                            </div>
+                            <div class="pt-1">
+                                <h3 class="text-sm font-semibold text-slate-900 mb-0.5">Phone Consultation</h3>
+                                <p class="text-xs text-slate-500 leading-relaxed">We'll call you within 24 hours to discuss details and timing.</p>
+                            </div>
+                        </li>
+
+                        <li class="step-item flex gap-4 relative">
+                            <div class="step-connector flex-shrink-0 relative">
+                                <div class="w-8 h-8 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center z-10 relative">4</div>
+                            </div>
+                            <div class="pt-1">
+                                <h3 class="text-sm font-semibold text-slate-900 mb-0.5">On-site Measurement</h3>
+                                <p class="text-xs text-slate-500 leading-relaxed">We'll schedule a visit to provide an exact, fixed-price quote.</p>
+                            </div>
+                        </li>
+
+                    </ol>
+
+                    <!-- Divider -->
+                    <div class="border-t border-slate-100 mb-6"></div>
+
+                    <!-- Trust Badges -->
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="flex flex-col items-center gap-2 py-4 px-3 rounded-xl bg-slate-50 border border-slate-100 text-center">
+                            <span class="material-icons text-primary text-2xl">verified_user</span>
+                            <span class="text-xs font-semibold text-slate-700">Licensed &amp; Insured</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 py-4 px-3 rounded-xl bg-slate-50 border border-slate-100 text-center">
+                            <span class="material-icons text-primary text-2xl">description</span>
+                            <span class="text-xs font-semibold text-slate-700">Free Estimates</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 py-4 px-3 rounded-xl bg-slate-50 border border-slate-100 text-center">
+                            <span class="material-icons text-primary text-2xl">star</span>
+                            <span class="text-xs font-semibold text-slate-700">5-Star Rated</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 py-4 px-3 rounded-xl bg-slate-50 border border-slate-100 text-center">
+                            <span class="material-icons text-primary text-2xl">handyman</span>
+                            <span class="text-xs font-semibold text-slate-700">Master Builders</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Inspirations -->
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">Recent Inspirations</h3>
+                    <div class="grid grid-cols-3 gap-2">
+                        <div class="rounded-lg overflow-hidden aspect-square relative">
+                            <img
+                                src="projects\project2.jpeg"
+                                alt="Deck inspiration 1"
+                                class="w-full h-full object-cover"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        </div>
+                        <div class="rounded-lg overflow-hidden aspect-square relative">
+                            <img
+                                src="projects\project4.jpeg"
+                                alt="Deck inspiration 2"
+                                class="w-full h-full object-cover"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        </div>
+                        <div class="rounded-lg overflow-hidden aspect-square relative">
+                            <img
+                                src="projects\project3.jpeg"
+                                alt="Deck inspiration 3"
+                                class="w-full h-full object-cover"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200 pt-16 pb-8 mt-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="mb-6">
+                        <img src="brand_assets/DivineDecksLogo.png" alt="Divine Decks" class="h-8">
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Excellence in outdoor living design and construction. Based in Marrickville, Sydney — crafting premium decks and outdoor spaces for homes across the area.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 font-bold mb-6">Services</h4>
+                    <ul class="space-y-4">
+                        <li><a class="text-slate-600 hover:text-primary text-sm transition-colors" href="services.html">Custom Deck Design</a></li>
+                        <li><a class="text-slate-600 hover:text-primary text-sm transition-colors" href="services.html">Deck Restoration</a></li>
+                        <li><a class="text-slate-600 hover:text-primary text-sm transition-colors" href="services.html">Hardwood Installation</a></li>
+                        <li><a class="text-slate-600 hover:text-primary text-sm transition-colors" href="projects.html">Projects</a></li>
+                        <li><a class="text-slate-600 hover:text-primary text-sm transition-colors" href="services.html">Outdoor Kitchens</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 font-bold mb-6">Company</h4>
+                    <ul class="space-y-4">
+                        <li><a class="text-slate-600 hover:text-primary text-sm transition-colors" href="why-choose-us.html">About Our Team</a></li>
+                        <li><a class="text-slate-600 hover:text-primary text-sm transition-colors" href="#">Process &amp; Timelines</a></li>
+                        <li><a class="text-slate-600 hover:text-primary text-sm transition-colors" href="projects.html">Projects</a></li>
+                        <li><a class="text-slate-600 hover:text-primary text-sm transition-colors" href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 font-bold mb-6">Get In Touch</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-slate-600 text-sm">
+                            <span class="material-symbols-outlined text-primary text-lg mt-0.5">location_on</span>
+                            Marrickville, 2204
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-600 text-sm">
+                            <span class="material-symbols-outlined text-primary text-lg">call</span>
+                            0481 827 666
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-600 text-sm">
+                            <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                            rory@divinedecks.com.au
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-xs">© 2024 Divine Decks Construction Ltd. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-xl transition-colors">facebook</span>
+                    <span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-xl transition-colors">photo_camera</span>
+                    <span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-xl transition-colors">work</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            icon.textContent = menu.classList.contains('hidden') ? 'menu' : 'close';
+        });
+    </script>
+</body>
+</html>

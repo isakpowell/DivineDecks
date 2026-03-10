@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Services — Divine Decks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@400,0&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: "#1978e5" },
+                    fontFamily: { sans: ["Inter", "sans-serif"] },
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#f6f7f8] text-slate-900">
+
+<!-- NAV -->
+<header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <a href="index.html" class="flex items-center">
+                <img src="brand_assets/DivineDecksLogo.png" alt="Divine Decks" class="h-10">
+            </a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="text-sm font-medium transition-colors hover:text-primary text-slate-600">Home</a>
+                <a href="why-choose-us.html" class="text-sm font-medium transition-colors hover:text-primary text-slate-600">Why Choose Us</a>
+                <a href="services.html" class="text-sm font-medium transition-colors hover:text-primary text-primary border-b-2 border-primary">Services</a>
+                <a href="projects.html" class="text-sm font-medium transition-colors hover:text-primary text-slate-600">Projects</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="quote.html" class="hidden sm:flex bg-primary hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-colors shadow-lg shadow-blue-500/20">
+                    Get a Quote
+                </a>
+                <button class="md:hidden text-slate-600" id="menu-toggle">
+                    <span class="material-symbols-outlined" id="menu-icon">menu</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="hidden md:hidden bg-white border-b border-slate-200 p-4" id="mobile-menu">
+        <div class="flex flex-col gap-4">
+            <a href="index.html" class="text-sm font-medium text-slate-600">Home</a>
+            <a href="why-choose-us.html" class="text-sm font-medium text-slate-600">Why Choose Us</a>
+            <a href="services.html" class="text-sm font-medium text-slate-600">Services</a>
+            <a href="projects.html" class="text-sm font-medium text-slate-600">Projects</a>
+            <a href="quote.html" class="bg-primary text-white text-center py-2 rounded-lg font-bold">Get a Quote</a>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="bg-white py-14">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div>
+            <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-[1.1] mb-5 w-full">
+                Our Premium Decking Services
+            </h1>
+            <p class="text-slate-500 text-[15px] leading-relaxed max-w-md">
+                Custom-designed decks and outdoor living spaces. From initial design through final installation, Divine Decks brings your vision to life with precision and premium materials.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES GRID -->
+<section class="bg-white py-14">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
+
+            <!-- Custom Deck Design -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div class="h-60 overflow-hidden">
+                    <img src="projects/project1.jpeg" alt="Custom Deck Design" class="w-full h-full object-cover"/>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Custom Deck Design</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                        Every great deck starts with a great design. Our team works closely with you to create a custom blueprint that maximises your outdoor space, matches your home's architecture, and fits your budget perfectly.
+                    </p>
+                    <a href="services/custom-deck-design.html" class="text-primary text-sm font-semibold hover:underline inline-flex items-center gap-1">
+                        Read more <span class="material-icons text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- General Carpentry -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div class="h-60 overflow-hidden">
+                    <img src="projects/project2.jpeg" alt="General Carpentry" class="w-full h-full object-cover"/>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">General Carpentry</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                        We source and install premium Australian hardwoods including Spotted Gum, Blackbutt, and Merbau. These natural materials offer exceptional durability and timeless beauty that only improves with age.
+                    </p>
+                    <a href="services/general-carpentry.html" class="text-primary text-sm font-semibold hover:underline inline-flex items-center gap-1">
+                        Read more <span class="material-icons text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Composite Decking -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div class="h-60 overflow-hidden">
+                    <img src="projects/project3.jpeg" alt="Composite Decking" class="w-full h-full object-cover"/>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Composite Decking</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                        For the look of real timber with virtually zero maintenance, our composite decking solutions are unmatched. Resistant to moisture, fading, and splintering — ideal for busy Sydney families.
+                    </p>
+                    <a href="services/composite-decking.html" class="text-primary text-sm font-semibold hover:underline inline-flex items-center gap-1">
+                        Read more <span class="material-icons text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Saunas -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div class="h-60 overflow-hidden">
+                    <img src="projects/project4.jpeg" alt="Saunas" class="w-full h-full object-cover"/>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Saunas</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                        Bring the spa to your backyard. We design and build custom outdoor saunas using premium timber and quality heating systems — a luxurious addition to any Sydney home.
+                    </p>
+                    <a href="services/saunas.html" class="text-primary text-sm font-semibold hover:underline inline-flex items-center gap-1">
+                        Read more <span class="material-icons text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section class="bg-[#f6f7f8] py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <h2 class="text-3xl font-black text-slate-900 text-center mb-12">How We Work</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+
+            <div class="flex flex-col items-center text-center">
+                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <span class="material-icons text-primary">chat_bubble_outline</span>
+                </div>
+                <h4 class="text-sm font-bold text-slate-900 mb-2">1. Consultation</h4>
+                <p class="text-sm text-slate-500 leading-relaxed">We meet to understand your goals, space, and budget in a no-obligation consultation.</p>
+            </div>
+
+            <div class="flex flex-col items-center text-center">
+                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <span class="material-icons text-primary">design_services</span>
+                </div>
+                <h4 class="text-sm font-bold text-slate-900 mb-2">2. Design & Plan</h4>
+                <p class="text-sm text-slate-500 leading-relaxed">Our designers create detailed plans and 3D renderings for your approval before work begins.</p>
+            </div>
+
+            <div class="flex flex-col items-center text-center">
+                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <span class="material-icons text-primary">construction</span>
+                </div>
+                <h4 class="text-sm font-bold text-slate-900 mb-2">3. Construction</h4>
+                <p class="text-sm text-slate-500 leading-relaxed">Our skilled craftsmen build your project on time using premium materials and proven techniques.</p>
+            </div>
+
+            <div class="flex flex-col items-center text-center">
+                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <span class="material-icons text-primary">verified</span>
+                </div>
+                <h4 class="text-sm font-bold text-slate-900 mb-2">4. Quality Review</h4>
+                <p class="text-sm text-slate-500 leading-relaxed">A thorough final walkthrough ensures everything meets our high standards before handover.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-primary py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-black text-white mb-4">Ready to start your project?</h2>
+        <p class="text-blue-100 text-[15px] max-w-xl mx-auto mb-8">
+            Contact us today for a free estimate. Our team is ready to transform your outdoor space into something extraordinary.
+        </p>
+        <a href="quote.html" class="inline-flex items-center gap-2 bg-white text-primary hover:bg-blue-50 font-bold px-8 py-3.5 rounded-xl text-sm transition-colors">
+            Get a Free Estimate
+            <span class="material-icons text-base">arrow_forward</span>
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-white border-t border-slate-200 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div>
+                <div class="mb-6">
+                    <img src="brand_assets/DivineDecksLogo.png" alt="Divine Decks" class="h-8">
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Excellence in outdoor living design and construction. Based in Marrickville, Sydney — crafting premium decks and outdoor spaces for homes across the area.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-slate-900 font-bold mb-6">Quick Links</h4>
+                <ul class="space-y-4">
+                    <li><a class="text-slate-600 hover:text-primary text-sm" href="index.html">Home</a></li>
+                    <li><a class="text-slate-600 hover:text-primary text-sm" href="why-choose-us.html">Why Choose Us</a></li>
+                    <li><a class="text-slate-600 hover:text-primary text-sm" href="projects.html">Projects</a></li>
+                    <li><a class="text-slate-600 hover:text-primary text-sm" href="services.html">Services</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-slate-900 font-bold mb-6">Services</h4>
+                <ul class="space-y-4">
+                    <li><a class="text-slate-600 hover:text-primary text-sm" href="services.html">Custom Decks</a></li>
+                    <li><a class="text-slate-600 hover:text-primary text-sm" href="services.html">Pergolas &amp; Gazebos</a></li>
+                    <li><a class="text-slate-600 hover:text-primary text-sm" href="services.html">Outdoor Kitchens</a></li>
+                    <li><a class="text-slate-600 hover:text-primary text-sm" href="services.html">Restoration</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-slate-900 font-bold mb-6">Contact Us</h4>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3 text-slate-600 text-sm">
+                        <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                        Marrickville, 2204
+                    </li>
+                    <li class="flex items-center gap-3 text-slate-600 text-sm">
+                        <span class="material-symbols-outlined text-primary text-lg">call</span>
+                        0481 827 666
+                    </li>
+                    <li class="flex items-center gap-3 text-slate-600 text-sm">
+                        <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                        rory@divinedecks.com.au
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-slate-500 text-xs">© 2024 Divine Decks Construction Ltd. All rights reserved.</p>
+            <div class="flex gap-6">
+                <span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-xl">facebook</span>
+                <span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-xl">photo_camera</span>
+                <span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-xl">work</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const icon = document.getElementById('menu-icon');
+    toggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        icon.textContent = menu.classList.contains('hidden') ? 'menu' : 'close';
+    });
+</script>
+</body>
+</html>
