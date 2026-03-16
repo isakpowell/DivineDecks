@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+    <title>Quote Received — Divine Decks</title>
+    <meta name="robots" content="noindex"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { primary: "#1978e5" } } }
+        }
+    </script>
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-[#f6f7f8] text-slate-900">
+
+<!-- NAV -->
+<header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <a href="index.html" class="flex items-center">
+                <img src="brand_assets/DivineDecksLogo.png" alt="Divine Decks" class="h-10">
+            </a>
+            <a href="quote.html" class="hidden sm:flex bg-primary hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-colors">
+                Get a Quote
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- CONTENT -->
+<section class="min-h-[70vh] flex items-center justify-center py-20 px-4">
+    <div class="text-center max-w-lg">
+        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="material-icons text-primary text-3xl">check_circle</span>
+        </div>
+        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4" style="letter-spacing:-0.02em;">
+            Thanks, we'll be in touch!
+        </h1>
+        <p class="text-slate-500 text-base leading-relaxed mb-8">
+            Your quote request has been received. We'll review your project details and get back to you shortly.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="index.html" class="bg-primary hover:bg-blue-700 text-white font-bold px-8 py-3.5 rounded-xl text-sm transition-colors">
+                Back to Home
+            </a>
+            <a href="projects.html" class="bg-white border border-slate-200 hover:bg-slate-50 text-slate-900 font-bold px-8 py-3.5 rounded-xl text-sm transition-colors">
+                View Our Work
+            </a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
